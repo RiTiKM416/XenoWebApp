@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Gamepad2, Zap, Shield, Globe2, ChevronRight, Menu, Search, X } from 'lucide-react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import SecondPage from './SecondPage'; // New second page component
-import PaymentPage from './PaymentPage'; // New payment gateway page component
+import SecondPage from './SecondPage';
+import PaymentPage from './PaymentPage';
+import './src/index.css';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -87,11 +88,11 @@ function App() {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                      <Link to="/" className="hover:text-purple-400 transition-colors">Products</Link>
-                      <Link to="/second-page" className="hover:text-purple-400 transition-colors">Pricing</Link>
-                      <Link to="/" className="hover:text-purple-400 transition-colors">About</Link>
-                      <Link to="/" className="hover:text-purple-400 transition-colors">Contact</Link>
-                      <button className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors">
+                      <Link to="/" className="hover:text-purple-400 transition-colors hover-glow">Products</Link>
+                      <Link to="/second-page" className="hover:text-purple-400 transition-colors hover-glow">Pricing</Link>
+                      <Link to="/" className="hover:text-purple-400 transition-colors hover-glow">About</Link>
+                      <Link to="/" className="hover:text-purple-400 transition-colors hover-glow">Contact</Link>
+                      <button className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors button-glow">
                         Sign In
                       </button>
                     </div>
@@ -102,8 +103,8 @@ function App() {
                 </div>
               </nav>
 
-              {/* Rest of the component remains unchanged */}
-              <div className="relative overflow-hidden">
+              {/* Hero Section */}
+              <div className="relative overflow-hidden gradient-animation">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533740566848-5f7d3e04e3d7?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 relative">
                   <div className="text-center reveal">
@@ -114,7 +115,7 @@ function App() {
                       Premium digital gaming services designed to enhance your gameplay. Join the future of gaming today.
                     </p>
                     <Link to="/second-page">
-                      <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 inline-flex items-center">
+                      <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:scale-105 inline-flex items-center button-glow">
                         Get Started <ChevronRight className="ml-2" />
                       </button>
                     </Link>
@@ -125,17 +126,17 @@ function App() {
               {/* Features */}
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                 <div className="grid md:grid-cols-3 gap-12">
-                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll">
+                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll hover-glow">
                     <Zap className="h-12 w-12 text-purple-500 mb-4" />
                     <h3 className="text-xl font-bold mb-4">Boost Performance</h3>
                     <p className="text-gray-400">Optimize your gaming experience with our advanced performance enhancement tools.</p>
                   </div>
-                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll delay-200">
+                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll delay-200 hover-glow">
                     <Shield className="h-12 w-12 text-cyan-500 mb-4" />
                     <h3 className="text-xl font-bold mb-4">Anti-Cheat Protection</h3>
                     <p className="text-gray-400">Play with confidence knowing you're protected by our state-of-the-art security system.</p>
                   </div>
-                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll delay-400">
+                  <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-900/30 backdrop-blur-sm hover:transform hover:-translate-y-2 transition-all reveal-on-scroll delay-400 hover-glow">
                     <Globe2 className="h-12 w-12 text-purple-500 mb-4" />
                     <h3 className="text-xl font-bold mb-4">Global Servers</h3>
                     <p className="text-gray-400">Connect to our worldwide network of high-performance gaming servers.</p>
@@ -149,7 +150,7 @@ function App() {
                   Choose Your Plan
                 </h2>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-gray-900/50 rounded-2xl border border-purple-900/30 backdrop-blur-sm p-8 reveal-on-scroll">
+                  <div className="bg-gray-900/50 rounded-2xl border border-purple-900/30 backdrop-blur-sm p-8 reveal-on-scroll hover-glow">
                     <h3 className="text-2xl font-bold mb-4">Basic</h3>
                     <p className="text-4xl font-bold mb-8">$9.99<span className="text-lg text-gray-400">/month</span></p>
                     <ul className="space-y-4 mb-8">
@@ -157,11 +158,11 @@ function App() {
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> Standard Protection</li>
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> 5 Server Locations</li>
                     </ul>
-                    <button className="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors">
+                    <button className="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors button-glow">
                       Get Started
                     </button>
                   </div>
-                  <div className="bg-gradient-to-b from-purple-900/50 to-cyan-900/50 rounded-2xl border border-purple-500/30 backdrop-blur-sm p-8 transform scale-105 reveal-on-scroll delay-200">
+                  <div className="bg-gradient-to-b from-purple-900/50 to-cyan-900/50 rounded-2xl border border-purple-500/30 backdrop-blur-sm p-8 transform scale-105 reveal-on-scroll delay-200 hover-glow">
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-cyan-500 px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
@@ -173,11 +174,11 @@ function App() {
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> 15 Server Locations</li>
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> Priority Support</li>
                     </ul>
-                    <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:opacity-90 px-6 py-3 rounded-lg transition-opacity">
+                    <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:opacity-90 px-6 py-3 rounded-lg transition-opacity button-glow">
                       Get Started
                     </button>
                   </div>
-                  <div className="bg-gray-900/50 rounded-2xl border border-purple-900/30 backdrop-blur-sm p-8 reveal-on-scroll delay-400">
+                  <div className="bg-gray-900/50 rounded-2xl border border-purple-900/30 backdrop-blur-sm p-8 reveal-on-scroll delay-400 hover-glow">
                     <h3 className="text-2xl font-bold mb-4">Ultimate</h3>
                     <p className="text-4xl font-bold mb-8">$29.99<span className="text-lg text-gray-400">/month</span></p>
                     <ul className="space-y-4 mb-8">
@@ -187,7 +188,7 @@ function App() {
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> 24/7 Premium Support</li>
                       <li className="flex items-center"><ChevronRight className="text-purple-500 mr-2" /> Custom Features</li>
                     </ul>
-                    <button className="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors">
+                    <button className="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors button-glow">
                       Get Started
                     </button>
                   </div>
