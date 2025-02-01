@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Gamepad2, Zap, Shield, Globe2, ChevronRight, Menu, Search, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import '/index.css';
 
 const SecondPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
