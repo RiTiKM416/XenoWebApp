@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { PayPal, Bitcoin, CreditCard } from 'lucide-react';
-import './index.css';
+import '/index.css';
 
 const PaymentOptions = () => {
   const location = useLocation();
