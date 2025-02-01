@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { PayPal, Bitcoin, CreditCard, Gamepad2, Menu } from 'lucide-react';
+import { Bitcoin, CreditCard, Gamepad2, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '/src/index.css';
 
@@ -61,7 +61,9 @@ const PaymentPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-900/50 rounded-2xl border border-purple-900/30 backdrop-blur-sm p-8 reveal-on-scroll hover-glow">
-            <PayPal className="h-12 w-12 text-purple-500 mb-4" />
+            <div className="h-12 w-12 mb-4 flex items-center justify-center bg-purple-500/10 rounded-lg">
+              <span className="text-2xl font-bold text-purple-500">$</span>
+            </div>
             <h3 className="text-2xl font-bold mb-4">PayPal</h3>
             <p className="text-gray-400 mb-8">Pay securely with your PayPal account.</p>
             <button className="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors button-glow">
