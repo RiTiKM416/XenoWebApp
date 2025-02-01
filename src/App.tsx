@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Gamepad2, Zap, Shield, Globe2, ChevronRight, Menu, Search, X } from 'lucide-react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import SecondPage from './SecondPage';
-import PaymentPage from './PaymentPage';
-import './src/index.css';
+import SecondPage from '/SecondPage';
+import PaymentPage from '/PaymentPage';
+import '/src/index.css';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
