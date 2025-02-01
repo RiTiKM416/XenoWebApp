@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { PayPal, Bitcoin, CreditCard, Gamepad2, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import '/src/index.css';
+import 'src/index.css';
 
 const PaymentPage = () => {
   const location = useLocation();
